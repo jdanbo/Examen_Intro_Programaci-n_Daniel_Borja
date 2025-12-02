@@ -95,7 +95,7 @@ Algoritmo Examenv2
 					Escribir "*********************************************"
 					Escribir "Bienvenido, porfavor ingresar las inasistencias del estudiante: ", i+1
 					Escribir ""
-					Escribir "Ingrese la nota 1 del estudiante", i
+					Escribir "Ingrese la inasistencia del estudiante", i
 					Leer inasistencias[i]
 					Escribir ""
 					Escribir "Estudiante #", i, " Inasistencias: ", inasistencias[i]
@@ -110,8 +110,7 @@ Algoritmo Examenv2
 				Escribir ""
 				Para i Desde 0 Hasta 10 Hacer
 					Escribir "*********************************************"
-					i = i+1
-					Escribir "Estudiante: ", nombreEstudiantes[i]
+					Escribir "Estudiante: ", nombreEstudiantes[i], i+1
 					Escribir ""
 					Escribir "Codigo: ", codigoEstudiantes[i]
 					Escribir ""
@@ -136,8 +135,7 @@ Algoritmo Examenv2
 				Para i Desde 0 Hasta 10 Hacer
 					
 					Escribir "*********************************************"
-					i = i+1
-					Escribir "Estudiante: ", nombreEstudiantes[i]
+					Escribir "Estudiante: ", nombreEstudiantes[i], i+1
 					Escribir ""
 					Escribir "Codigo: ", codigoEstudiantes[i]
 					Escribir ""
