@@ -11,7 +11,7 @@ Funcion opcMenu <- menu
 	Escribir ""
 	Escribir "*******************************"
 	Leer opcMenu
-	Esperar 50 Milisegundos
+	Esperar 100 Milisegundos
 	
 Fin Funcion
 
@@ -40,17 +40,18 @@ Algoritmo Examenv2
 	Dimensionar nombreEstudiantes[10]
 	Dimensionar codigoEstudiantes[10]
 	
-	Para i Desde 0 Hasta 10 Hacer
+	Para i Desde 1 Hasta 2 Hacer
 		Escribir "*********************************************"
-		Escribir "Bienvenido, porfavor ingrese NOMBRE del estudiante #", i+1
+		Escribir "Bienvenido, porfavor ingrese NOMBRE del estudiante #", i
 		Leer nombreEstudiantes[i]
-		Escribir "Bienvenido, porfavor ingrese CODIGO del estudiante #", i
+		Escribir "Bienvenido, porfavor ingrese CODIGO del estudiante", i
 		Leer codigoEstudiantes[i]
-		Esperar 50 Milisegundos
+		Esperar 100 Milisegundos
 		Escribir ""
 	Fin Para
 	
 	Escribir "Lista de Estudiantes Completa"
+	Escribir ""
 	
 	Repetir
 		Escribir "Bienvenido al programa para calcular notas"
@@ -63,13 +64,13 @@ Algoritmo Examenv2
 				Escribir "Bienvenido al Registro de Notas"
 				Escribir ""
 				
-				Dimensionar nota1[3]
-				Dimensionar nota2[3]
-				Dimensionar nota3[3]
+				Dimensionar nota1[10]
+				Dimensionar nota2[10]
+				Dimensionar nota3[10]
 				
-				Para i Desde 0 Hasta 10 Hacer
+				Para i Desde 1 Hasta 2 Hacer
 					Escribir "*********************************************"
-					Escribir "Bienvenido, porfavor ingresar las 3 notas del estudiante: ", i+1
+					Escribir "Bienvenido, porfavor ingresar las 3 notas del estudiante: ", nombreEstudiantes[i]
 					Escribir ""
 					Escribir "Ingrese la nota 1 del estudiante", i
 					Leer nota1[i]
@@ -79,38 +80,40 @@ Algoritmo Examenv2
 					Leer nota3[i]
 					Escribir ""
 					Escribir "Nota 1: ", nota1[i], " Nota 2: ", nota2[i], " Nota 3: ", nota3[i]
-					Esperar 50 Milisegundos
+					Esperar 100 Milisegundos
 					Escribir ""
 				Fin Para
 				
 				Escribir "Volviendo al Menu Principal"
-				opcMenu <- menu
+				Escribir ""
+				
 			2:
 				Escribir "Bienvenido al Registro de Inasistencias"
 				Escribir ""
 				
 				Dimensionar inasistencias[10]
 				
-				Para i Desde 0 Hasta 10 Hacer
+				Para i Desde 1 Hasta 2 Hacer
 					Escribir "*********************************************"
-					Escribir "Bienvenido, porfavor ingresar las inasistencias del estudiante: ", i+1
+					Escribir "Bienvenido, porfavor ingresar las inasistencias del estudiante: ", nombreEstudiantes[i]
 					Escribir ""
 					Escribir "Ingrese la inasistencia del estudiante", i
 					Leer inasistencias[i]
 					Escribir ""
-					Escribir "Estudiante #", i, " Inasistencias: ", inasistencias[i]
-					Esperar 50 Milisegundos
+					Escribir "Estudiante #", nombreEstudiantes[i], " Inasistencias: ", inasistencias[i]
+					Esperar 100 Milisegundos
 					Escribir ""
 				Fin Para
 				
 				Escribir "Volviendo al Menu Principal"
-				opcMenu <- menu
+				Escribir ""
+				
 			3:
 				Escribir "Bienvenido al Listado de Estudiantes"
 				Escribir ""
-				Para i Desde 0 Hasta 10 Hacer
+				Para i Desde 1 Hasta 2 Hacer
 					Escribir "*********************************************"
-					Escribir "Estudiante: ", nombreEstudiantes[i], i+1
+					Escribir "Estudiante: ", nombreEstudiantes[i]
 					Escribir ""
 					Escribir "Codigo: ", codigoEstudiantes[i]
 					Escribir ""
@@ -120,22 +123,25 @@ Algoritmo Examenv2
 					Escribir ""
 					Escribir "Nota3: ", nota3[i]
 					Escribir ""
-					Esperar 50 Milisegundos
+					Esperar 100 Milisegundos
 					Escribir ""
 				Fin Para
 				
 				Escribir "Volviendo al Menu Principal"
-				opcMenu <- menu
+				Escribir ""
+				
 			4:
 				Escribir "Bienvenido al Calculo de Notas Finales"
 				Escribir ""
 				
-				notaFinal = (nota1[i] + nota2[i] + nota3[i]) /3
+				//notaFinal = (nota1[i] + nota2[i] + nota3[i]) /3
 				
-				Para i Desde 0 Hasta 10 Hacer
+				Para i Desde 1 Hasta 2 Hacer
+					
+					notaFinal = (nota1[i] + nota2[i] + nota3[i]) /3
 					
 					Escribir "*********************************************"
-					Escribir "Estudiante: ", nombreEstudiantes[i], i+1
+					Escribir "Estudiante: ", nombreEstudiantes[i]
 					Escribir ""
 					Escribir "Codigo: ", codigoEstudiantes[i]
 					Escribir ""
@@ -164,7 +170,8 @@ Algoritmo Examenv2
 				Fin Para
 				
 				Escribir "Volviendo al Menu Principal"
-				opcMenu <- menu
+				Escribir ""
+				
 				
 			De Otro Modo:
 				Escribir "Error. Porfavor, ingrese un numero correcto"
