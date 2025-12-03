@@ -39,10 +39,15 @@ Algoritmo Examenv2
 	
 	Dimensionar nombreEstudiantes[10]
 	Dimensionar codigoEstudiantes[10]
+	Dimensionar nota1[10]
+	Dimensionar nota2[10]
+	Dimensionar nota3[10]
+	Dimensionar inasistencias[10]
+
 	
-	Para i Desde 1 Hasta 2 Hacer
+	Para i Desde 0 Hasta 9 Hacer
 		Escribir "*********************************************"
-		Escribir "Bienvenido, porfavor ingrese NOMBRE del estudiante #", i
+		Escribir "Bienvenido, porfavor ingrese NOMBRE del estudiante #", i+1
 		Leer nombreEstudiantes[i]
 		Escribir "Bienvenido, porfavor ingrese CODIGO del estudiante", i
 		Leer codigoEstudiantes[i]
@@ -64,15 +69,11 @@ Algoritmo Examenv2
 				Escribir "Bienvenido al Registro de Notas"
 				Escribir ""
 				
-				Dimensionar nota1[10]
-				Dimensionar nota2[10]
-				Dimensionar nota3[10]
-				
-				Para i Desde 1 Hasta 2 Hacer
+				Para i Desde 0 Hasta 9 Hacer
 					Escribir "*********************************************"
 					Escribir "Bienvenido, porfavor ingresar las 3 notas del estudiante: ", nombreEstudiantes[i]
 					Escribir ""
-					Escribir "Ingrese la nota 1 del estudiante", i
+					Escribir "Ingrese la nota 1 del estudiante", i+1
 					Leer nota1[i]
 					Escribir "Ingrese la nota 2 del estudiante", i
 					Leer nota2[i]
@@ -90,14 +91,12 @@ Algoritmo Examenv2
 			2:
 				Escribir "Bienvenido al Registro de Inasistencias"
 				Escribir ""
-				
-				Dimensionar inasistencias[10]
-				
-				Para i Desde 1 Hasta 2 Hacer
+								
+				Para i Desde 0 Hasta 9 Hacer
 					Escribir "*********************************************"
 					Escribir "Bienvenido, porfavor ingresar las inasistencias del estudiante: ", nombreEstudiantes[i]
 					Escribir ""
-					Escribir "Ingrese la inasistencia del estudiante", i
+					Escribir "Ingrese la inasistencia del estudiante", i+1
 					Leer inasistencias[i]
 					Escribir ""
 					Escribir "Estudiante #", nombreEstudiantes[i], " Inasistencias: ", inasistencias[i]
@@ -111,7 +110,7 @@ Algoritmo Examenv2
 			3:
 				Escribir "Bienvenido al Listado de Estudiantes"
 				Escribir ""
-				Para i Desde 1 Hasta 2 Hacer
+				Para i Desde 0 Hasta 9 Hacer
 					Escribir "*********************************************"
 					Escribir "Estudiante: ", nombreEstudiantes[i]
 					Escribir ""
@@ -136,7 +135,7 @@ Algoritmo Examenv2
 				
 				//notaFinal = (nota1[i] + nota2[i] + nota3[i]) /3
 				
-				Para i Desde 1 Hasta 2 Hacer
+				Para i Desde 0 Hasta 9 Hacer
 					
 					notaFinal = (nota1[i] + nota2[i] + nota3[i]) /3
 					
@@ -181,3 +180,5 @@ Algoritmo Examenv2
 	
 	
 FinAlgoritmo
+
+
